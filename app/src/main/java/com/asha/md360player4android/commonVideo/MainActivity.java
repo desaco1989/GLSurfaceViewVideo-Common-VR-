@@ -42,12 +42,12 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         glSurfaceView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
 
         mediaPlayer = new MediaPlayer();
-        //mVideoPathUri = Uri.parse("android.resource://" + this.getPackageName() + "/" + R.raw.tusdk_sample_splice_video);
-        String url = "http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
+        mVideoPathUri = Uri.parse("android.resource://" + this.getPackageName() + "/" + R.raw.tusdk_sample_splice_video);
+
 
         try {
-            mediaPlayer.setDataSource(url);
-//			 mediaPlayer.setDataSource(this, mVideoPathUri);
+//            mediaPlayer.setDataSource(url);
+			 mediaPlayer.setDataSource(this, mVideoPathUri);
         } catch (IOException e) {
             e.printStackTrace();
         }

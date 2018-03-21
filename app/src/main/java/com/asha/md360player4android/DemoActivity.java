@@ -78,8 +78,7 @@ public class DemoActivity extends AppCompatActivity {
             public void onClick(View v) {//asVideo
                 String url = et.getText().toString();
                 if (!TextUtils.isEmpty(url)){
-                    //TODO http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4
-                    url = "http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
+                    url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
                     MD360PlayerActivity.startVideo(DemoActivity.this, Uri.parse(url));
                 } else {
                     Toast.makeText(DemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
@@ -104,9 +103,7 @@ public class DemoActivity extends AppCompatActivity {
             public void onClick(View v) {//ijkVideo
                 String url = et.getText().toString();
                 if (!TextUtils.isEmpty(url)){
-                    //TODO http://ofqeepdd.vod2.hongshiyun.net/target/mp4/2017/07/14/649_61090e7afda541f5974c2e571b96b5a1_20_854x480.mp4
-                    //http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4
-                    url = "http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
+                    url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
                     IjkPlayerDemoActivity.start(DemoActivity.this, Uri.parse(url));
                 } else {
                     Toast.makeText(DemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();

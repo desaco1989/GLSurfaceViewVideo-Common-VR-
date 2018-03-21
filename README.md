@@ -1,3 +1,5 @@
+在MD360 VR- https://github.com/ashqal/MD360Player4Android，非常感谢MD360的作者，在此基础上新增GLSurfaceView播放普通视频。
+
 # MD360Player4Android
 It is a lite library to render 360 degree panorama video for Android.
 [![](https://jitpack.io/v/ashqal/MD360Player4Android.svg)](https://jitpack.io/#ashqal/MD360Player4Android)
