@@ -28,7 +28,6 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
     private Uri mVideoPathUri;
     private MediaPlayer mediaPlayer;
 
-    //com.asha.md360player4android.commonVideo.MainActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         setContentView(R.layout.activity_main);
 
         glSurfaceView = (GLSurfaceView) findViewById(R.id.surface_view);
+
 
         glSurfaceView.setEGLContextClientVersion(2);
         glSurfaceView.setRenderer(this);
@@ -60,10 +60,6 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        // set the background clear color to black.
-//        GLES20.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-//        // use culling to remove back faces.
-//        GLES20.glEnable(GLES20.GL_CULL_FACE);
 
         mTextureID = createTextureID();
         mSurface = new SurfaceTexture(mTextureID);
@@ -89,14 +85,10 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
     public void onDrawFrame(GL10 gl) {
         GLES20.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
-
         float[] mtx = new float[16];
         mSurface.getTransformMatrix(mtx);
         mSurface.updateTexImage();
-
         mDirectDrawer.draw(mtx);
-
-
     }
 
     @Override
@@ -132,6 +124,4 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         super.onPause();
         glSurfaceView.onPause();
     }
-
-
 }

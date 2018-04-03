@@ -20,9 +20,6 @@ public class OpenglRender {
                     "textureCoordinate = inputTextureCoordinate;" +
                     "}";
 
-
-
-
     private final String fragmentShaderCode =
             "#extension GL_OES_EGL_image_external : require\n" +
                     "precision mediump float;" +
@@ -137,9 +134,9 @@ public class OpenglRender {
 
     private float[] transformTextureCoordinates(float[] coords, float[] matrix) {
         float[] result = new float[coords.length];
-        float[] vt = new float[4];//float[] vt = new float[4];
+        float[] vt = new float[4];
 
-        for (int i = 0; i < coords.length; i += 2) {//for (int i = 0; i < coords.length; i += 2)
+        for (int i = 0; i < coords.length; i += 2) {
             float[] v = {coords[i], coords[i + 1], 0, 1};
             Matrix.multiplyMV(vt, 0, matrix, 0, v, 0);
             result[i] = vt[0];

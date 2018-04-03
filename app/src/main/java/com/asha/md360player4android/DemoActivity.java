@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.asha.md360player4android.commonVideo.GLViewMediaActivity;
+
 import com.asha.md360player4android.commonVideo.MainActivity;
 
 /**
@@ -79,8 +80,9 @@ public class DemoActivity extends AppCompatActivity {
             public void onClick(View v) {//asVideo
                 String url = et.getText().toString();
                 if (!TextUtils.isEmpty(url)){
-                    url = "http://video.netwin.cn/a0315d42031144cca1062fcbfd533bcb/5b89d15323c24cdda1f7f72f077749d2-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
+//                    url = "http://video.netwin.cn/a0315d42031144cca1062fcbfd533bcb/5b89d15323c24cdda1f7f72f077749d2-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
 //                    url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
+                    url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
                     MD360PlayerActivity.startVideo(DemoActivity.this, Uri.parse(url));
                 } else {
                     Toast.makeText(DemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
