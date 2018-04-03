@@ -38,6 +38,9 @@ import java.nio.ShortBuffer;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+/**
+ * https://github.com/ChouRay/PlayVideo-OpenGL
+ */
 public class GLViewMediaActivity extends Activity implements GLSurfaceView.Renderer, SurfaceTexture.OnFrameAvailableListener, View.OnClickListener {
 
     public static final String videoPath = Environment.getExternalStorageDirectory().getPath() + "/Movies/不将就.mp4";
