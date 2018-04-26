@@ -164,8 +164,9 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
             mediaPlayer.setSurface(surface);
             surface.release();
             try {
-                //
-                String videoPath = "http://www.w3school.com.cn/example/html5/mov_bbb.mp4";
+                //http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4
+                // http://www.w3school.com.cn/example/html5/mov_bbb.mp4
+                String videoPath = "http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
                 mediaPlayer.setDataSource(videoPath);
                 mediaPlayer.prepareAsync();
             } catch (IOException e) {
@@ -208,14 +209,16 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
         if (isHorizontalScreen) {
             this.width = CommonUtils.getScreenWidth(context);
             this.height = CommonUtils.getScreenHeight(context);
+
+            glView.getLayoutParams().width = this.width;
+            glView.getLayoutParams().height = this.height;
         } else {
             this.width = CommonUtils.getScreenWidth(context);
             this.height = CommonUtils.getScreenWidth(context) * 9 / 16;
+
+            glView.getLayoutParams().width = this.width;
+            glView.getLayoutParams().height = this.height;
         }
-
-//        this.width = width;
-//        this.height = height;
-
         playVideo();
     }
 
@@ -231,11 +234,8 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
         }
         GLES20.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
-
-        Log.e("desaco", "width=" + width + ",,,height=" + height);
         GLES20.glViewport(0, 0, width, height);//TODO
         this.drawTexture();
-
     }
 
     @Override
