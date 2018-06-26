@@ -2,7 +2,6 @@ package com.asha.md360player4android;
 
 import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Surface;
 import android.view.View;
 import android.widget.Toast;
@@ -12,8 +11,6 @@ import com.asha.vrlib.MD360DirectorFactory;
 import com.asha.vrlib.MDVRLibrary;
 import com.asha.vrlib.model.BarrelDistortionConfig;
 import com.asha.vrlib.model.MDPinchConfig;
-import com.asha.vrlib.model.MDRay;
-import com.asha.vrlib.plugins.hotspot.IMDHotspot;
 
 import tv.danmaku.ijk.media.player.IMediaPlayer;
 
@@ -69,7 +66,7 @@ public class VideoPlayerActivity extends MD360PlayerActivity {
                 mMediaPlayerWrapper.pause();
                 mMediaPlayerWrapper.destroy();
                 mMediaPlayerWrapper.init();
-                mMediaPlayerWrapper.openRemoteFile(DemoActivity.sPath + "video_31b451b7ca49710719b19d22e19d9e60.mp4");
+                mMediaPlayerWrapper.openRemoteFile(MainDemoActivity.sPath + "video_31b451b7ca49710719b19d22e19d9e60.mp4");
                 mMediaPlayerWrapper.prepare();
             }
         });

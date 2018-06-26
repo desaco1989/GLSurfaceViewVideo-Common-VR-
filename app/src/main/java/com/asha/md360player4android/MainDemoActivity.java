@@ -21,7 +21,7 @@ import com.asha.md360player4android.commonVideo.MainActivity;
  * Created by hzqiujiadi on 16/1/26.
  * hzqiujiadi ashqalcn@gmail.com
  */
-public class DemoActivity extends AppCompatActivity {
+public class MainDemoActivity extends AppCompatActivity {
 
     public static final String sPath = "file:///mnt/sdcard/vr/";
 
@@ -83,9 +83,9 @@ public class DemoActivity extends AppCompatActivity {
 //                    url = "http://video.netwin.cn/a0315d42031144cca1062fcbfd533bcb/5b89d15323c24cdda1f7f72f077749d2-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
 //                    url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
                     url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
-                    MD360PlayerActivity.startVideo(DemoActivity.this, Uri.parse(url));
+                    MD360PlayerActivity.startVideo(MainDemoActivity.this, Uri.parse(url));
                 } else {
-                    Toast.makeText(DemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainDemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -95,9 +95,9 @@ public class DemoActivity extends AppCompatActivity {
             public void onClick(View v) {//asBitmap
                 String url = et.getText().toString();
                 if (!TextUtils.isEmpty(url)){
-                    MD360PlayerActivity.startBitmap(DemoActivity.this, Uri.parse(url));
+                    MD360PlayerActivity.startBitmap(MainDemoActivity.this, Uri.parse(url));
                 } else {
-                    Toast.makeText(DemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainDemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -108,27 +108,27 @@ public class DemoActivity extends AppCompatActivity {
                 String url = et.getText().toString();
                 if (!TextUtils.isEmpty(url)){
                     url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
-                    IjkPlayerDemoActivity.start(DemoActivity.this, Uri.parse(url));
+                    IjkPlayerDemoActivity.start(MainDemoActivity.this, Uri.parse(url));
                 } else {
-                    Toast.makeText(DemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainDemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
         //play_common_video
         findViewById(R.id.play_common_video).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {//GLSurfaceView播放普通视频
                 Intent commonVideoIntent = new Intent();
-                commonVideoIntent.setClass(DemoActivity.this, MainActivity.class);
+                commonVideoIntent.setClass(MainDemoActivity.this, MainActivity.class);
                 startActivity(commonVideoIntent);
             }
         });
 
         findViewById(R.id.play_common_video2).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v) {//GLView+OpenGL播放普通视频
                 Intent commonVideoIntent = new Intent();
-                commonVideoIntent.setClass(DemoActivity.this, GLViewMediaActivity.class);
+                commonVideoIntent.setClass(MainDemoActivity.this, GLViewMediaActivity.class);
                 startActivity(commonVideoIntent);
             }
         });

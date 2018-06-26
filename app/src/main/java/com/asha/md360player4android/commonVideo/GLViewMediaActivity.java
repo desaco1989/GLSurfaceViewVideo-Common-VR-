@@ -151,7 +151,7 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
         }
     }
 
-    private void playVideo() {
+    private void playVideo() {//TODO
         if (mediaPlayer == null) {
             mediaPlayer = new MediaPlayer();
             mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -166,7 +166,8 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
             try {
                 //http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4
                 // http://www.w3school.com.cn/example/html5/mov_bbb.mp4
-                String videoPath = "http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
+//                String videoPath = "http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
+                String videoPath = "http://www.w3school.com.cn/example/html5/mov_bbb.mp4";
                 mediaPlayer.setDataSource(videoPath);
                 mediaPlayer.prepareAsync();
             } catch (IOException e) {
