@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         setContentView(R.layout.activity_main);
 
         glSurfaceView = (GLSurfaceView) findViewById(R.id.surface_view);
-
-
         glSurfaceView.setEGLContextClientVersion(2);
         glSurfaceView.setRenderer(this);
         //RENDERMODE_WHEN_DIRTY   RENDERMODE_CONTINUOUSLY
@@ -64,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         mTextureID = createTextureID();
         mSurface = new SurfaceTexture(mTextureID);
         mSurface.setOnFrameAvailableListener(this);
+
         mDirectDrawer = new OpenglRender(mTextureID);
         surface = new Surface(mSurface);
         mediaPlayer.setSurface(surface);
@@ -120,7 +119,6 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
     }
     @Override
     protected void onPause() {
-        // TODO Auto-generated method stub
         super.onPause();
         glSurfaceView.onPause();
     }
