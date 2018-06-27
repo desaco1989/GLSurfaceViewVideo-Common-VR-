@@ -9,7 +9,7 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 
-public class OpenglRender {
+public class GLShaderTexture {
     private final String vertexShaderCode =
             "attribute vec4 vPosition;" +
                     "attribute vec2 inputTextureCoordinate;" +
@@ -58,7 +58,7 @@ public class OpenglRender {
 
     private int texture;
 
-    public OpenglRender(int texture) {
+    public GLShaderTexture(int texture) {
         this.texture = texture;
         // initialize vertex byte buffer for shape coordinates
         ByteBuffer bb = ByteBuffer.allocateDirect(squareCoords.length * 4);

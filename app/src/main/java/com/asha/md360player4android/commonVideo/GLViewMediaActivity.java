@@ -40,6 +40,8 @@ import javax.microedition.khronos.opengles.GL10;
 
 /**
  * https://github.com/ChouRay/PlayVideo-OpenGL
+ *
+ * 没有分离了OpenGL Shader着色器代码
  */
 public class GLViewMediaActivity extends Activity implements GLSurfaceView.Renderer, SurfaceTexture.OnFrameAvailableListener, View.OnClickListener {
 

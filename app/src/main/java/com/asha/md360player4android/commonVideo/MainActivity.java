@@ -19,11 +19,14 @@ import java.io.IOException;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
+/**
+ * 分离了OpenGL Shader着色器代码
+ */
 public class MainActivity extends AppCompatActivity implements GLSurfaceView.Renderer, SurfaceTexture.OnFrameAvailableListener {
     private GLSurfaceView glSurfaceView;
     private SurfaceTexture mSurface;
     int mTextureID = -1;
-    private OpenglRender mDirectDrawer;
+    private GLShaderTexture mDirectDrawer;
     private Surface surface;
     private Uri mVideoPathUri;
     private MediaPlayer mediaPlayer;
@@ -63,7 +66,7 @@ public class MainActivity extends AppCompatActivity implements GLSurfaceView.Ren
         mSurface = new SurfaceTexture(mTextureID);
         mSurface.setOnFrameAvailableListener(this);
 
-        mDirectDrawer = new OpenglRender(mTextureID);
+        mDirectDrawer = new GLShaderTexture(mTextureID);
         surface = new Surface(mSurface);
         mediaPlayer.setSurface(surface);
         surface.release();
