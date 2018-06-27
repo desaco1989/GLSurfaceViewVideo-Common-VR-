@@ -56,19 +56,18 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
     /**
      *
      */
-    private static float squareSize = 1.0f;
-    private static float squareCoords[] = {
-            -squareSize, squareSize,   // top left
-            -squareSize, -squareSize,   // bottom left
-            squareSize, -squareSize,    // bottom right
-            squareSize, squareSize}; // top right
-
     private static short drawOrder[] = {0, 1, 2, 0, 2, 3};
 
     private Context context;
 
     // Texture to be shown in backgrund
     private FloatBuffer textureBuffer;
+    private static float squareSize = 1.0f;
+    private static float squareCoords[] = {
+            -squareSize, squareSize,   // top left
+            -squareSize, -squareSize,   // bottom left
+            squareSize, -squareSize,    // bottom right
+            squareSize, squareSize}; // top right
     private float textureCoords[] = {
             0.0f, 1.0f, 0.0f, 1.0f,
             0.0f, 0.0f, 0.0f, 1.0f,

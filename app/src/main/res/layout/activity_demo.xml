@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="GLSurfaceView播放普通视频"
+        android:text="GLSurfaceView播放普通视频，分离了Shader"
         android:textAllCaps="false" />
 
     <Button
@@ -73,7 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:text="GLView+OpenGL播放普通视频"
+        android:text="GLView+OpenGL播放普通视频，未分离Shader"
         android:textAllCaps="false" />
 
 </LinearLayout>
