@@ -9,6 +9,9 @@ import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.ShortBuffer;
 
+/**
+ * OpenGL Shader着色器
+ */
 public class GLShaderTexture {
     private final String vertexShaderCode =
             "attribute vec4 vPosition;" +
