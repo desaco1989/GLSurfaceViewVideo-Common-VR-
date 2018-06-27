@@ -22,7 +22,7 @@ import javax.microedition.khronos.opengles.GL10;
 /**
  * 分离了OpenGL Shader着色器代码
  */
-public class MainActivity extends AppCompatActivity implements GLSurfaceView.Renderer, SurfaceTexture.OnFrameAvailableListener {
+public class GLShaderMainActivity extends AppCompatActivity implements GLSurfaceView.Renderer, SurfaceTexture.OnFrameAvailableListener {
     private GLSurfaceView glSurfaceView;
     private SurfaceTexture mSurface;
     int mTextureID = -1;

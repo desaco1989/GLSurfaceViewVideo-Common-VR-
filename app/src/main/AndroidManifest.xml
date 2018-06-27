@@ -39,9 +39,13 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.asha.md360player4android.commonVideo.MainActivity"
+            android:name="com.asha.md360player4android.commonVideo.GLShaderMainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name="com.asha.md360player4android.commonVideo.GLViewMediaActivity"></activity>
+        <activity
+            android:name="com.asha.md360player4android.commonVideo.GLViewMediaActivity"
+            android:screenOrientation="portrait">
+
+        </activity>
 
     </application>
 

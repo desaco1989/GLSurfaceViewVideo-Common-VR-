@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.asha.md360player4android.commonVideo.GLViewMediaActivity;
 
-import com.asha.md360player4android.commonVideo.MainActivity;
+import com.asha.md360player4android.commonVideo.GLShaderMainActivity;
 
 /**
  * Created by hzqiujiadi on 16/1/26.
@@ -119,7 +119,7 @@ public class MainDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {//GLSurfaceView播放普通视频
                 Intent commonVideoIntent = new Intent();
-                commonVideoIntent.setClass(MainDemoActivity.this, MainActivity.class);
+                commonVideoIntent.setClass(MainDemoActivity.this, GLShaderMainActivity.class);
                 startActivity(commonVideoIntent);
             }
         });

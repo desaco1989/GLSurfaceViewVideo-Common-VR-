@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.SurfaceTexture;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.opengl.GLES11Ext;
 import android.opengl.GLES20;
@@ -98,6 +99,9 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
         context = this;
 
         initView();
+
+        playVideo();
+        Toast.makeText(this, "马上开始播放！", Toast.LENGTH_SHORT).show();
     }
 
     private void initView() {
@@ -161,9 +165,7 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
                     mp.start();
                 }
             });
-            Surface surface = new Surface(videoTexture);
-            mediaPlayer.setSurface(surface);
-            surface.release();
+
             try {
                 //http://video.netwin.cn/9e0e1e46a4d3493d9d6111a4ac0b8d12/193234ee930947478049edab17ac91ac-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4
                 // http://www.w3school.com.cn/example/html5/mov_bbb.mp4
@@ -203,6 +205,10 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
         setupGraphics();
         setupVertexBuffer();
         setupTexture();
+
+        Surface surface = new Surface(videoTexture);
+        mediaPlayer.setSurface(surface);
+        surface.release();
     }
 
     @Override
@@ -221,7 +227,8 @@ public class GLViewMediaActivity extends Activity implements GLSurfaceView.Rende
             glView.getLayoutParams().width = this.width;
             glView.getLayoutParams().height = this.height;
         }
-        playVideo();
+
+
     }
 
     @Override
