@@ -7,6 +7,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Vr视频："
+        android:textColor="#ff0000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="12dp"
         android:text="Url" />
@@ -57,7 +65,28 @@
             android:text="asIjkVideo"
             android:textAllCaps="false" />
     </LinearLayout>
+    <Button
+        android:id="@+id/vr_player2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Vr全景图片和视频"
+        android:textAllCaps="false" />
 
+    <View
+        android:background="#ff0000"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="点播视频："
+        android:textColor="#ff0000" />
     <Button
         android:id="@+id/play_common_video"
         android:layout_width="wrap_content"
@@ -75,5 +104,15 @@
         android:layout_marginTop="10dp"
         android:text="GLView+OpenGL播放普通视频，未分离Shader"
         android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/play_common_video3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="GLView OpenGL播放普通视频，分离Shader"
+        android:textAllCaps="false" />
+
 
 </LinearLayout>

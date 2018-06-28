@@ -1,4 +1,4 @@
-package com.asha.md360player4android;
+package com.asha.md360player4android.vr_player1;
 
 import android.animation.PropertyValuesHolder;
 import android.animation.ValueAnimator;
@@ -12,7 +12,6 @@ import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.util.SimpleArrayMap;
-import android.util.Log;
 import android.util.SparseArray;
 import android.view.View;
 import android.view.Window;
@@ -20,6 +19,8 @@ import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.asha.md360player4android.R;
+import com.asha.md360player4android.utils.LogUtil;
 import com.asha.vrlib.MDDirectorCamUpdate;
 import com.asha.vrlib.MDVRLibrary;
 import com.asha.vrlib.model.MDHotspotBuilder;

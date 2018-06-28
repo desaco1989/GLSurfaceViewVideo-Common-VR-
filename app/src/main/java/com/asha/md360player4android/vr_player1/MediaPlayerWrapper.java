@@ -1,4 +1,4 @@
-package com.asha.md360player4android;
+package com.asha.md360player4android.vr_player1;
 
 import android.content.Context;
 import android.content.res.AssetManager;

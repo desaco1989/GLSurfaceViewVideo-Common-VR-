@@ -16,6 +16,11 @@ import android.widget.Toast;
 import com.asha.md360player4android.commonVideo.GLViewMediaActivity;
 
 import com.asha.md360player4android.commonVideo.GLShaderMainActivity;
+import com.asha.md360player4android.commonVideo.GLViewVideoActivity;
+import com.asha.md360player4android.vr_player1.IjkPlayerDemoActivity;
+import com.asha.md360player4android.vr_player1.MD360PlayerActivity;
+import com.asha.md360player4android.vr_player1.SpinnerHelper;
+import com.asha.md360player4android.vr_player2.VrPlayer2Activity;
 
 /**
  * Created by hzqiujiadi on 16/1/26.
@@ -79,7 +84,7 @@ public class MainDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {//asVideo
                 String url = et.getText().toString();
-                if (!TextUtils.isEmpty(url)){
+                if (!TextUtils.isEmpty(url)) {
 //                    url = "http://video.netwin.cn/a0315d42031144cca1062fcbfd533bcb/5b89d15323c24cdda1f7f72f077749d2-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
 //                    url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
                     url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
@@ -94,7 +99,7 @@ public class MainDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {//asBitmap
                 String url = et.getText().toString();
-                if (!TextUtils.isEmpty(url)){
+                if (!TextUtils.isEmpty(url)) {
                     MD360PlayerActivity.startBitmap(MainDemoActivity.this, Uri.parse(url));
                 } else {
                     Toast.makeText(MainDemoActivity.this, "empty url!", Toast.LENGTH_SHORT).show();
@@ -106,7 +111,7 @@ public class MainDemoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {//ijkVideo
                 String url = et.getText().toString();
-                if (!TextUtils.isEmpty(url)){
+                if (!TextUtils.isEmpty(url)) {
                     url = "rtsp://218.204.223.237:554/live/1/66251FC11353191F/e7ooqwcfbqjoo80j.sdp";
                     IjkPlayerDemoActivity.start(MainDemoActivity.this, Uri.parse(url));
                 } else {
@@ -114,6 +119,16 @@ public class MainDemoActivity extends AppCompatActivity {
                 }
             }
         });
+        //
+        findViewById(R.id.vr_player2).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {//ijkVideo
+                Intent commonVideoIntent = new Intent();
+                commonVideoIntent.setClass(MainDemoActivity.this, VrPlayer2Activity.class);
+                startActivity(commonVideoIntent);
+            }
+        });
+
         //play_common_video
         findViewById(R.id.play_common_video).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,10 +147,19 @@ public class MainDemoActivity extends AppCompatActivity {
                 startActivity(commonVideoIntent);
             }
         });
+        //
+        findViewById(R.id.play_common_video3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {//GLView+OpenGL播放普通视频
+                Intent commonVideoIntent = new Intent();
+                commonVideoIntent.setClass(MainDemoActivity.this, GLViewVideoActivity.class);
+                startActivity(commonVideoIntent);
+            }
+        });
     }
 
-    private Uri getDrawableUri(@DrawableRes int resId){
+    private Uri getDrawableUri(@DrawableRes int resId) {
         Resources resources = getResources();
-        return Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + resources.getResourcePackageName(resId) + '/' + resources.getResourceTypeName(resId) + '/' + resources.getResourceEntryName(resId) );
+        return Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE + "://" + resources.getResourcePackageName(resId) + '/' + resources.getResourceTypeName(resId) + '/' + resources.getResourceEntryName(resId));
     }
 }

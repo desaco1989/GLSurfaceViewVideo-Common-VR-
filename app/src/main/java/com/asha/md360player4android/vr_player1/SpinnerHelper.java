@@ -1,4 +1,4 @@
-package com.asha.md360player4android;
+package com.asha.md360player4android.vr_player1;
 
 import android.app.Activity;
 import android.util.SparseArray;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+
+import com.asha.md360player4android.R;
 
 /**
  * Created by hzqiujiadi on 16/6/24.

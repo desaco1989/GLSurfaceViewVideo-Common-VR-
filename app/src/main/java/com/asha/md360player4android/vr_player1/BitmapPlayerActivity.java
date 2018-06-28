@@ -1,4 +1,4 @@
-package com.asha.md360player4android;
+package com.asha.md360player4android.vr_player1;
 
 import android.content.ContentResolver;
 import android.content.res.Resources;
@@ -10,6 +10,7 @@ import android.support.annotation.DrawableRes;
 import android.util.Log;
 import android.view.View;
 
+import com.asha.md360player4android.R;
 import com.asha.vrlib.MDVRLibrary;
 import com.asha.vrlib.model.MDRay;
 import com.asha.vrlib.plugins.hotspot.IMDHotspot;

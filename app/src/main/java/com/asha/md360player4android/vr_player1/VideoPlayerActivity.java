@@ -1,4 +1,4 @@
-package com.asha.md360player4android;
+package com.asha.md360player4android.vr_player1;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.Surface;
 import android.view.View;
 import android.widget.Toast;
 
+import com.asha.md360player4android.MainDemoActivity;
+import com.asha.md360player4android.R;
 import com.asha.vrlib.MD360Director;
 import com.asha.vrlib.MD360DirectorFactory;
 import com.asha.vrlib.MDVRLibrary;

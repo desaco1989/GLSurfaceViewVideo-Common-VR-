@@ -42,7 +42,8 @@ import static android.opengl.GLES11Ext.GL_TEXTURE_EXTERNAL_OES;
  * opengl显示全景图片和opengl播放视频
  */
 
-public class VrPlayerActivity extends Activity {
+public class VrPlayer2Activity extends Activity {
+    //com.asha.md360player4android.vr_player2.VrPlayer2Activity
     //
     GLSurfaceView glSurfaceView;
     public float mAngleX = 0;// 摄像机所在的x坐标
@@ -102,8 +103,8 @@ public class VrPlayerActivity extends Activity {
                    // VR:  http://video.netwin.cn/a0315d42031144cca1062fcbfd533bcb/5b89d15323c24cdda1f7f72f077749d2-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4
 
 //                    mediaPlayerWrapper.setDataSource(Environment.getExternalStorageDirectory().getAbsolutePath() + "/a_rtmp_video/vr1.mp4");
-                    String url = "http://www.w3school.com.cn/example/html5/mov_bbb.mp4";
-//                    String url = "http://video.netwin.cn/a0315d42031144cca1062fcbfd533bcb/5b89d15323c24cdda1f7f72f077749d2-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
+//                    String url = "http://www.w3school.com.cn/example/html5/mov_bbb.mp4";
+                    String url = "http://video.netwin.cn/a0315d42031144cca1062fcbfd533bcb/5b89d15323c24cdda1f7f72f077749d2-a5b7d8911cc7d347a9c9dd7e9b1d521b.mp4";
                     mediaPlayerWrapper.setDataSource(url);
 
                     mediaPlayerWrapper.prepareAsync();

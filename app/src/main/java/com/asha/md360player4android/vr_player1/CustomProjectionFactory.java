@@ -1,4 +1,4 @@
-package com.asha.md360player4android;
+package com.asha.md360player4android.vr_player1;
 
 import com.asha.vrlib.common.MDDirection;
 import com.asha.vrlib.strategy.projection.AbsProjectionStrategy;

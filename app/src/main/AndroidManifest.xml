@@ -23,17 +23,17 @@
         </activity>
         <!---landscape portrait  -->
         <activity
-            android:name=".IjkPlayerDemoActivity"
+            android:name=".vr_player1.IjkPlayerDemoActivity"
             android:configChanges="screenSize|orientation"
             android:label="IjkPlayerDemoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".VideoPlayerActivity"
+            android:name=".vr_player1.VideoPlayerActivity"
             android:configChanges="screenSize|orientation"
             android:label="VideoPlayerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".BitmapPlayerActivity"
+            android:name=".vr_player1.BitmapPlayerActivity"
             android:configChanges="screenSize|orientation"
             android:label="BitmapPlayerActivity"
             android:screenOrientation="portrait" />
@@ -46,6 +46,8 @@
             android:screenOrientation="portrait">
 
         </activity>
+        <activity android:name="com.asha.md360player4android.commonVideo.GLViewVideoActivity"/>
+        <activity android:name="com.asha.md360player4android.vr_player2.VrPlayer2Activity"/>
 
     </application>
 

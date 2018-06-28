@@ -35,7 +35,7 @@ public class GLShaderMainActivity extends AppCompatActivity implements GLSurface
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_glview_media);
 
         glSurfaceView = (GLSurfaceView) findViewById(R.id.surface_view);
         glSurfaceView.setEGLContextClientVersion(2);
